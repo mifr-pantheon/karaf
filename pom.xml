@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <!--
 
@@ -25,7 +24,7 @@
         <groupId>org.apache</groupId>
         <artifactId>apache</artifactId>
         <version>18</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <groupId>org.apache.karaf</groupId>
@@ -309,7 +308,7 @@
         <winsw.version>1.18</winsw.version>
 
 
-        <surefire.argLine />
+        <surefire.argLine/>
 
         <!-- Further used maven plugin versions; e.g. in the docs -->
         <plugin.depends.version>1.4.0</plugin.depends.version>
@@ -1941,7 +1940,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -1955,7 +1954,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -1968,7 +1967,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                                 <pluginExecution>
@@ -1981,7 +1980,7 @@
                                         </goals>
                                     </pluginExecutionFilter>
                                     <action>
-                                        <ignore />
+                                        <ignore/>
                                     </action>
                                 </pluginExecution>
                             </pluginExecutions>
@@ -2089,7 +2088,31 @@
                     </execution>
                 </executions>
             </plugin>
-        </plugins>
+        
+      <plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>fabric8-maven-plugin</artifactId>
+        <version>3.5.28</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>resource</goal>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      
+        <configuration>
+          <resources>
+            <labels>
+              <all>
+                <space>MySpace</space>
+              </all>
+            </labels>
+          </resources>
+        </configuration>
+      </plugin>
+    </plugins>
     </build>
 
     <reporting>
